@@ -29,8 +29,10 @@ To get started, download the latest `Struct Utility.zip` from the **Releases** s
 
 ⬡ **Advanced Configuration:**
 
-  If you want to place your main game file in a separate folder where the engine's root directory is **not** in the same root scope, you must change the settings parameter:
-  Set `SEPARATE_GAME_DIR=true` (by default, it is set to `false`).
+If you want to place your main game file in a separate folder where the engine's root directory is **not** in the same root scope, you must change the settings parameter:
+Set `SEPARATE_GAME_DIR=true` (by default, it is set to `false`).
+  
+<br>
 
 ###  Configuration Scenarios
 Copy the initialization block into the beginning of your main script. Choose one of the 3 path scenarios below by adjusting the `SEPARATE_GAME_DIR` flag:
