@@ -56,6 +56,8 @@ Copy the initialization block into the beginning of your main script. Choose one
 ```
 </details>
 
+<br>
+
 #### Scenario **B**: "Simple Mode" (Standard Separation)
 *Clean and organized. A main project folder holds your game script, and the utility folder sits right next to it.*
 
@@ -72,9 +74,11 @@ Copy the initialization block into the beginning of your main script. Choose one
 ```
 </details>
 
+<br>
+
 #### Scenario **C**: "Advanced Mode" (Engine One Level Above)
 *Perfect for multi-project workspaces where the engine core is completely separated from isolated game apps.*
-
+▬
 ▫ Settings: `set "SEPARATE_GAME_DIR=true"`
 
 <details>
@@ -85,7 +89,8 @@ Copy the initialization block into the beginning of your main script. Choose one
 📁 MyDeveloperWorkspace/
 ├─➣ 📁 Struct Utility/       ◄• Shared engine core files
 └─➣ 📁 MyGame/               ◄• Isolated game folder
-    └─➣ 📄 game.bat     ◄• Resolves paths upward (..) to find core
+    └─➣ 📄 game.bat          ◄• Resolves paths upward (..) to find core
 ```
+
 </details>
 
