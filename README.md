@@ -14,5 +14,17 @@ into a clean and well-organized environment.
 
 ### ◄|► Navigation
 
-  <dela>
+
+## Installation & Quick Setup
+
+To get started, download the latest `Struct Utility.zip` from the **Releases** section. After that, follow these setup instructions:
+
+* ↳ **1.** Extract the ZIP archive completely.
+* ↳ **2.** The `Struct Utility` folder is the **core root directory** of the engine.
+* ↳ **3.** Create your game folder, place the engine's root directory inside it, and create your main game file there.
+
+> ⚙ **Advanced Configuration:**
+> If you want to place your main game file in a separate folder where the engine's root directory is **not** in the same root scope, you must change the settings parameter:
+> Set `"MAIN_GAME_FILE_NOT_IN_ENGINE_SCOPE=1"` (by default, it is set to `0`).
+
 
