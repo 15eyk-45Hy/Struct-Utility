@@ -113,6 +113,9 @@ Example:
 ```batch
 %ES-engine% struct "OptMode-true" "resources" "str:display_name" "int:price"
 ```
+• **`"OptMode-true"`** - Speeds up processing. **NOTE:** While enabled, existing class structures are locked and cannot be updated until optimization mode is turned off. *(Recommended for release).*
+
+• **`OptMode-false`** — Standard mode. Allows full dynamic updates and overwriting of structure blueprints on the fly. *(Recommended for debugging).*
 <br>
 
 **2. Instantiating an Entity**
@@ -125,8 +128,20 @@ To instantiate an entity from a defined class, use the syntax below:
 
 Example:
 ```batch
-%ES-engine% new "resorces" "wood" "Pine Wood" "50"
+%ES-engine% new "resources" "wood" "Pine Wood" "50"
 ```
 <br>
 
 **3. How to set up a Namespace**
+
+To bind classes to a namespace, use the following syntax:
+
+```batch
+%ES-engine% namespace "NameSpaceName" "ClassName" "ClassName" ... (and so on)
+```
+
+Example:
+```batch
+%ES-engine% namespace "items" "resources"
+```
+
