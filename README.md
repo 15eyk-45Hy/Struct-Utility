@@ -117,6 +117,30 @@ Example:
 
 • **`OptMode-false`** — Standard mode. Allows full dynamic updates and overwriting of structure blueprints on the fly. *(Recommended for debugging).*
 <br>
+<details>
+<summary>? Frequently Asked Questions <sub>(expand)</sub></summary>
+  <br>
+  
+#### Q: Why build an OOP engine inside Windows Batch?
+
+**A:** Windows Batch is historically limited, lacking native support for classes, objects, and type validation. **Struct-Utility** was created to challenge
+these limitations, demonstrating that with advanced scripting mechanics (like recursive token loops and variable expansion hacks), you can bring a modern,
+structured architecture to vanilla CMD scripts.
+
+<br>
+
+#### Q: Is there really no limit to the number of class properties?
+
+**A:** Technically, there is no hard limit—thanks to the dynamic `SHIFT` loop, you can pass 20 or more properties. However, keep in mind that **the more properties you add, the slower the class initialization becomes**. Processing a massive number of properties requires more CPU cycles and disk writes in Windows Batch, so it is recommended to keep your structs optimal and clean.
+
+<br>
+
+#### Q: Will this slow down my game or application during gameplay?
+
+**A:** Reading values from an initialized entity is instant because they are loaded directly into RAM environment variables. To maximize performance during file creation, you can toggle `OptMode-true` to prevent unnecessary hard drive write cycles and use high-speed metadata caching.
+</details>
+
+<br>
 
 **2. Instantiating an Entity**
 
