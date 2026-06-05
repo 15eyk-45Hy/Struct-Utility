@@ -80,7 +80,7 @@ Copy the initialization block into the beginning of your main script. Choose one
 
 #### Scenario **C**: "Advanced Mode" (Engine One Level Above)
 *Perfect for multi-project workspaces where the engine core is completely separated from isolated game apps.*
-▬
+
 ▫ Settings: `set "SEPARATE_GAME_DIR=true"`
 
 <details>
@@ -96,3 +96,20 @@ Copy the initialization block into the beginning of your main script. Choose one
 
 </details>
 
+<br>
+
+## Syntax & Usage
+
+<br>
+
+**How to define a new Class**
+
+To create a class for your objects with strict data types, use the following syntax:
+
+```batch
+!ES-engine! struct "OptMode-true/false" "ClassName" "DataType:PropertyName" "DataType:PropertyName" :: ... (and so on)
+```
+Example:
+```batch
+!ES-engine! struct "OptMode-true" "resources" "str:display_name" "int:price"
+```
