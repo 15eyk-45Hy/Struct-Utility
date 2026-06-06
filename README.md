@@ -155,6 +155,21 @@ Example:
 %ES-engine% new "resources" "wood" "Pine Wood" "50"
 ```
 <br>
+<details>
+<summary>★ Entity Initialization Notes:  <sub>(expand)</sub></summary>
+
+<br>
+
+• **Overflow Protection:** If the number of passed values exceeds the allowed property count defined in the class, the engine halts and fires Error.
+
+• **Underflow Behavior:** If you pass fewer values than the class requires, the remaining properties will remain uninitialized (empty).
+
+• **Variable Access Pattern:** Injected variables are stored in RAM using the following strict template: `!ClassName.EntityName.PropertyName!`
+
+• **Object Overwriting:** Running the `new` command on an existing `EntityName` will completely overwrite its previous data.
+</details>
+
+<br>
 
 **3. How to set up a Namespace**
 
