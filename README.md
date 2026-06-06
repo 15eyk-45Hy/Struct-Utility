@@ -184,3 +184,16 @@ Example:
 %ES-engine% namespace "items" "resources"
 ```
 
+<details>
+<summary>★ Namespace Configuration Notes <sub>(expand)</sub></summary>
+
+• **Multi-Class Binding:** You can bind multiple different classes to a single namespace within a single command call.
+
+• **Nested / Cascading Namespaces:** The engine supports deep nesting. By executing the namespace command sequentially, you can chain multiple namespaces together to create advanced tree-like structures (e.g., `!models.items.resources.iron.price!`).
+
+• **Deep Variable Access Pattern:** After executing the namespace command, variables become accessible via a nested structure: `!NamespaceName.ClassName.EntityName.PropertyName!`
+
+• **Empty Class Protection:** If you try to resolve a namespace for a class that has no active initialized entities, the engine will trigger an error and halt.
+
+</details>
+
