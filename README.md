@@ -96,6 +96,8 @@ Copy the initialization block into the beginning of your main script. Choose one
 
 </details>
 
+---
+
 <br>
 
 ## Syntax & Usage
@@ -187,6 +189,8 @@ Example:
 <details>
 <summary>★ Namespace Configuration Notes <sub>(expand)</sub></summary>
 
+<br>
+
 • **Multi-Class Binding:** You can bind multiple different classes to a single namespace within a single command call.
 
 • **Nested / Cascading Namespaces:** The engine supports deep nesting. By executing the namespace command sequentially, you can chain multiple namespaces together to create advanced tree-like structures (e.g., `!models.items.resources.iron.price!`).
@@ -197,3 +201,47 @@ Example:
 
 </details>
 
+---
+
+<br>
+
+## Practical Example
+
+<br>
+
+Here, I will demonstrate what kind of nested structure tree you can build, using a clear example from gamedev.
+
+```txt
+├─➣└─➣│
+📁 items 
+├─➣ 📁 products
+│    ├─➣ 📁 gear
+│    │    ├─➣ 📐 tools
+│    │    │    ├─➣ 🔹 iron_sword
+│    │    │    └─➣ 🔹 iron_axe
+│    │    └─➣ 📐 equipment
+│    │         ├─➣ 🔹 iron_helmet
+│    │         └─➣ 🔹 iron_chestplate
+│    └─➣ 📁 components
+│         ├─➣ 📐 parts
+│         │    ├─➣ 🔹 copper_wire
+│         │    └─➣ 🔹 glass
+│         └─➣ 📐 artifacts
+│              ├─➣ 🔹 blood_ruby
+│              └─➣ 🔹 emerald
+└─➣ 📁 resources
+     └─➣ 📐 raw
+          ├─➣ 🔹 iron_ore
+          └─➣ 🔹 copper
+```
+
+
+
+
+
+
+
+
+
+
+This is the type of object tree you can create by using the following syntax:
