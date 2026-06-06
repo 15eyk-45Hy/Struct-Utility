@@ -212,7 +212,6 @@ Example:
 Here, I will demonstrate what kind of nested structure tree you can build, using a clear example from gamedev.
 
 ```txt
-├─➣└─➣│
 📁 items 
 ├─➣ 📁 products
 │    ├─➣ 📁 gear
@@ -230,8 +229,11 @@ Here, I will demonstrate what kind of nested structure tree you can build, using
 │              ├─➣ 🔹 blood_ruby
 │              └─➣ 🔹 emerald
 └─➣ 📁 resources
-     └─➣ 📐 raw
-          ├─➣ 🔹 iron_ore
+     ├─➣ 📐 raw
+     │    ├─➣ 🔹 iron
+     │    └─➣ 🔹 copper
+     └─➣ 📐 crafted
+          ├─➣ 🔹 iron
           └─➣ 🔹 copper
 ```
 
