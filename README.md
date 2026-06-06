@@ -211,6 +211,12 @@ Example:
 
 Here, I will demonstrate what kind of nested structure tree you can build, using a clear example from gamedev.
 
+<br>
+<details>
+<summary> Struct-Tree <sub>(expand)</sub></summary>
+
+<br>
+
 ```txt
 📁 items 
 ├─➣ 📁 products
@@ -236,14 +242,10 @@ Here, I will demonstrate what kind of nested structure tree you can build, using
           ├─➣ 🔹 iron
           └─➣ 🔹 copper
 ```
+</details>
 
-
-
-
-
-
-
-
-
+<br>
 
 This is the type of object tree you can create by using the following syntax:
+
+
