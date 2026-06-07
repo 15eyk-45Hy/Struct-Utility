@@ -13,7 +13,12 @@ into a clean and well-organized environment.
 <br>
 
 ### ◄|► Navigation
+
 [Syntax & Usage](#syntax--usage)
+
+[Practical Example](#practical-example)
+
+<br>
 
 ## Installation & Quick Setup
 
