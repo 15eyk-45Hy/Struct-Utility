@@ -223,46 +223,17 @@ Example:
 
 ## Practical Example
 
+<img src="assets/StructTree1.png" align="right" width="300" alt="Image Struct Tree">
+
 <br>
+
 
 Here, I will demonstrate what kind of nested structure tree you can build, using a clear example from gamedev.
 
 <br>
-<details>
-<summary> Struct-Tree <sub>(expand)</sub></summary>
-
-<br>
-
-```txt
-📁 items 
-├─➣ 📁 products
-│    ├─➣ 📁 gear
-│    │    ├─➣ 📐 tools
-│    │    │    ├─➣ 🔹 iron_sword
-│    │    │    └─➣ 🔹 iron_axe
-│    │    └─➣ 📐 equipment
-│    │         ├─➣ 🔹 iron_helmet
-│    │         └─➣ 🔹 iron_chestplate
-│    └─➣ 📁 components
-│         ├─➣ 📐 parts
-│         │    ├─➣ 🔹 copper_wire
-│         │    └─➣ 🔹 glass
-│         └─➣ 📐 artifacts
-│              ├─➣ 🔹 blood_ruby
-│              └─➣ 🔹 emerald
-└─➣ 📁 resources
-     ├─➣ 📐 raw
-     │    ├─➣ 🔹 iron
-     │    └─➣ 🔹 copper
-     └─➣ 📐 crafted
-          ├─➣ 🔹 iron
-          └─➣ 🔹 copper
-```
-</details>
-
-<br>
 
 This is the type of object tree you can create by using the following syntax:
+
 
 ```batch
 !ES-engine! struct "OptMode-true" "tools" "str:display_name" "int:count" "int:multiplier_mining_dirt" "int:multiplier_mining_stone" "int:multiplier_mining_wood" "int:multiplier_damage"
@@ -298,3 +269,4 @@ This is the type of object tree you can create by using the following syntax:
 
 !ES-engine! namespace "NNMode-true" "items" "resources" "products"
 ```
+<br clear="right"/>
