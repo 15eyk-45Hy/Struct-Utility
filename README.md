@@ -14,8 +14,9 @@ into a clean and well-organized environment.
 
 ### ◄|► Navigation
 
-[Syntax & Usage](#syntax--usage)
+[![Syntax & Usage](https://shields.io)](#syntax--usage)
 
+[Syntax & Usage](#syntax--usage)
 [Practical Example](#practical-example)
 
 <br>
