@@ -115,10 +115,16 @@ Example:
 ```batch
 %ES-engine% struct "OptMode-true" "resources" "str:display_name" "int:price"
 ```
+<br>
+
+**OptMode (Optimization Mode)**
+
 • **`"OptMode-true"`** - Speeds up processing. **NOTE:** While enabled, existing class structures are locked and cannot be updated until optimization mode is turned off. *(Recommended for release).*
 
 • **`OptMode-false`** — Standard mode. Allows full dynamic updates and overwriting of structure blueprints on the fly. *(Recommended for debugging).*
+
 <br>
+
 <details>
 <summary>? Frequently Asked Questions <sub>(expand)</sub></summary>
   <br>
@@ -178,13 +184,23 @@ Example:
 To bind classes to a namespace, use the following syntax:
 
 ```batch
-%ES-engine% namespace "NameSpaceName" "ClassName" "ClassName" ... (and so on)
+%ES-engine% namespace NNMode-true/false "NameSpaceName" "ClassName" "ClassName" ... (and so on)
 ```
 
 Example:
 ```batch
-%ES-engine% namespace "items" "resources"
+%ES-engine% namespace NNMode-false "items" "resources"
 ```
+
+<br>
+
+**NNMode (Nested Namespace Mode)** 
+
+• **`NNMode-false`** - Accepts Classes name only (reads .meta files).
+
+• **`NNMode-true`** - Accepts Namespaces only (reads set memory).
+
+<br>
 
 <details>
 <summary>★ Namespace Configuration Notes <sub>(expand)</sub></summary>
@@ -248,4 +264,37 @@ Here, I will demonstrate what kind of nested structure tree you can build, using
 
 This is the type of object tree you can create by using the following syntax:
 
+```batch
+!ES-engine! struct "OptMode-true" "tools" "str:display_name" "int:count" "int:multiplier_mining_dirt" "int:multiplier_mining_stone" "int:multiplier_mining_wood" "int:multiplier_damage"
+!ES-engine! struct "OptMode-true" "equipment" "str:display_name" "int:count" "int:flat_resistance_strike" "int:flat_resistance_magic"
+!ES-engine! struct "OptMode-true" "parts" "str:display_name" "int:count"
+!ES-engine! struct "OptMode-true" "artifacts" "str:display_name" "int:count" "str:display_rarity" "int:rarity_lvl" "int:price"
+!ES-engine! struct "OptMode-true" "raw" "str:display_name" "int:smelt_time_multiplier" "int:smelt_energy_multiplier"
+!ES-engine! struct "OptMode-true" "crafted" "str:display_name" "int:price"
 
+!ES-engine! new "tools" "iron_sword" "Iron Sword" "0" "1" "1" "1" "3"
+!ES-engine! new "tools" "iron_axe" "Iron Axe" "0" "1" "1" "2" "2"
+
+!ES-engine! new "equipment" "iron_helmet" "Iron Helmet" "0" "2" "1"
+!ES-engine! new "equipment" "iron_chestplate" "Iron Chestplate" "0" "5" "3"
+
+!ES-engine! new "parts" "copper_wire" "Copper Wire" "0"
+!ES-engine! new "parts" "glass" "Glass" "0"
+
+!ES-engine! new "artifacts" "blood_ruby" "Blood Ruby" "0" "Legendary" "5" "3500"
+!ES-engine! new "artifacts" "emerald" "Emerald" "0" "Epic" "4" "2700"
+
+!ES-engine! new "raw" "iron" "Iron Ore" "5" "10"
+!ES-engine! new "raw" "copper" "Copper Ore" "3" "7"
+
+!ES-engine! new "crafted" "iron" "Iron Ingot" "300"
+!ES-engine! new "crafted" "copper" "Copper Ingot" "230"
+
+!ES-engine! namespace "NNMode-false" "gear" "equipment" "tools"
+!ES-engine! namespace "NNMode-false" "components" "parts" "artifacts"
+!ES-engine! namespace "NNMode-true" "products" "gear" "components"
+
+!ES-engine! namespace "NNMode-false" "resources" "raw" "crafted"
+
+!ES-engine! namespace "NNMode-true" "items" "resources" "products"
+```
