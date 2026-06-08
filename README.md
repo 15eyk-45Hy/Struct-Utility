@@ -36,15 +36,49 @@ To get started, download the latest `Struct Utility.zip` from the **Releases** s
 
 If you want to place your main game file in a separate folder where the engine's root directory is **not** in the same root scope, you must change the settings parameter:
 Set `SEPARATE_GAME_DIR=true` (by default, it is set to `false`).
-  
+
 <br>
 
-###  Configuration Scenarios
+### Settings
+
+<br>
+
+**Copy this initialization block and paste it at the beginning of your main game file.**
+
+<br>
+
+```batch
+@echo off 
+::    ====================================
+::       S   E   T   T   I   N   G   S   
+::    ====================================
+      set "ENGINE_ROOT_DIR=Struct Utility" 
+      set "SEPARATE_GAME_DIR=true"
+::    ====================================
+
+echo "%~dp0" | findstr /i /c:"%ENGINE_ROOT_DIR%" >nul
+
+if %errorlevel%==0 (
+    set ES-engine=call "%~dp0engine.bat"
+) else (
+    if "%SEPARATE_GAME_DIR%"=="true" (
+        for %%A in ("%~dp0..\Struct Utility\engine.bat") do set "ES-engine=call "%%~fA""
+    ) else (
+        set ES-engine=call "%~dp0Struct Utility\engine.bat"
+    )
+)
+```
+
+---
+
+<br>
+
+##  Configuration Scenarios
 Copy the initialization block into the beginning of your main script. Choose one of the 3 path scenarios below by adjusting the `SEPARATE_GAME_DIR` flag:
 
 <br>
 
-#### Scenario **A**: "Lazy Mode" (All-in-one directory)
+### Scenario **A**: "Lazy Mode" (All-in-one directory)
 
 *The quickest way for raw testing. Your game script is placed directly inside the utility folder next to `engine.bat`.*
 
@@ -65,7 +99,7 @@ Copy the initialization block into the beginning of your main script. Choose one
 
 <br>
 
-#### Scenario **B**: "Simple Mode" (Standard Separation)
+### Scenario **B**: "Simple Mode" (Standard Separation)
 *Clean and organized. A main project folder holds your game script, and the utility folder sits right next to it.*
 
 ▫ Settings: `set "SEPARATE_GAME_DIR=false"`
@@ -83,7 +117,7 @@ Copy the initialization block into the beginning of your main script. Choose one
 
 <br>
 
-#### Scenario **C**: "Advanced Mode" (Engine One Level Above)
+### Scenario **C**: "Advanced Mode" (Engine One Level Above)
 *Perfect for multi-project workspaces where the engine core is completely separated from isolated game apps.*
 
 ▫ Settings: `set "SEPARATE_GAME_DIR=true"`
