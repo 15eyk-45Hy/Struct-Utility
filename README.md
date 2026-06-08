@@ -22,7 +22,7 @@ into a clean and well-organized environment.
 
 ## Installation & Quick Setup
 
-To get started, download the latest `Struct Utility.zip` from the **Releases** section. After that, follow these setup instructions:
+To get started, download the latest `Struct.Utility.zip` from the **Releases** section. After that, follow these setup instructions:
 
 • **1.** Extract the ZIP archive completely.
 
